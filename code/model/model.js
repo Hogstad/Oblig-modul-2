@@ -1,3 +1,4 @@
+//model
 const divApp = document.getElementById("app");
 
 const model = {
@@ -18,7 +19,11 @@ const model = {
                 { contentOfBox: 'greier6', isChecket: false },
                 { contentOfBox: 'greier7', isChecket: false },
                 { contentOfBox: 'greier8', isChecket: false },
-            },
+            ],
 
+        },
     ],
-}, r
+}
+
+
+//model.boxes[0].content[0]
