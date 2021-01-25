@@ -14,6 +14,6 @@ function printBox(index) {
         <button>Rediger</button>
         <button>Legg til ny</button>
     `;
-    model.showDishes = html;
+    model.showBoxes = html;
     mainView();
 }

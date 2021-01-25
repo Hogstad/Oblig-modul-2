@@ -2,6 +2,7 @@
 const divApp = document.getElementById("app");
 
 const model = {
+    showBoxes: "",
     boxes: [
         {
             name: 'Box 1',
