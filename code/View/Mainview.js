@@ -12,8 +12,4 @@ function mainView() {
                             <button onclick="printBox(${i})">${model.boxes[i]}</button>
                         `;
     };
-    html += `
-                        <div style = "background-color: green;">${model.showBoxes}</div>
-        `;
-    divApp.innerHTML = html;
-};
+}
