@@ -1,6 +1,16 @@
 //mainView
     //Legg til ny
     // Legge til en ny box i modellen.
+    function newBox() {
+        let x =  {
+            name: inputTitle,
+            
+        };
+        model.series.push(x);
+    
+        inputText = "";
+        mainPageView();
+    }
 
     //Endre Valgt
     //Sende deg inn på subView, innenfor den boksen som er valgt.
@@ -10,6 +20,10 @@
 
     //Slett Valgt
     //Slette den markerte boksen.
+    function deleteBox(index) {
+        model.boxes.splice(index, 1);
+        mainView();
+    }
 
 //subView
     //Legg til ny
