@@ -1,0 +1,17 @@
+.app {
+    padding: 0;
+    margin: 0;
+}
+#dropDownMenu {
+    width: 100px;
+    height: 55px;
+}
+
+#mainViewButtons {
+    width: 150px;
+    height: 55px;
+}
+.button {
+    width: 100px;
+    height: 25px;
+}
