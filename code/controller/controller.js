@@ -24,7 +24,6 @@
     //Slette den markerte boksen.
     function deleteBox(index) {
         model.boxes.splice(index, 1);
-        mainView();
     }
 
 //subView
