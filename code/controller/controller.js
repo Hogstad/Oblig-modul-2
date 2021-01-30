@@ -2,12 +2,15 @@
     //Legg til ny
     // Legge til en ny box i modellen.
     function newBox() {
-   
+        let x = {
+            name: 'Box 3',
+        };
+    model.boxes.push(x);
     }
 
-    //Endre Valgt
+    //Vis innhold
     //Sende deg inn på subView, innenfor den boksen som er valgt.
-    function changeBox() {
+    function showContent() {
 
     }
 
@@ -28,12 +31,14 @@
     //Legg til ny
     //Legge til nytt innhold innenfor den valgte boksen.
     function addNewContentInBox() {
+        model.boxes(index).content.contentOfBox.push
 
     }
 
     //Endre valgt
     //Her skal man kunne endre den valgte gjenstanden som er inne i en ny boks (navn)
     function changeContentInBox() {
+        model.boxes(index).content.contentOfBox.splice(index,1)
 
     }
 
@@ -46,6 +51,6 @@
     //Slett
     //Slette den valgte gjenstanden innenfor den valgte boksen.
     function deleteContentInBox(index) {
-        model.boxes[0].content[0].splice(index, 1);
+        model.boxes(index).content.contentOfBox.splice(index,1),
         mainView();
     }

@@ -5,38 +5,19 @@ function mainView() {
     html += `
     <div id="dropDownMenu">
     <select>
-        <option value="1">Box 1</option>
-        <option value="2">Box 2</option>
+        <option value="1">${model.boxes[0]}</option>
+        <option value="2">${model.boxes[1]}</option>
     </select>
     </div>
     `
     html += `
             <div id="mainViewButtons">
-                <button>Legg til ny</button>
-                <button>Vis innhold</button>
-                <button>Søk etter innhold</button>
-                <button>Slett valgt</button
+                <button onclick="newBox()">Legg til ny</button>
+                <button onclick="showContent()">Vis innhold</button>
+                <button onclick="seach()">Søk etter innhold</button>
+                <button onclick="deleteBox()">Slett valgt</button>
             </div> 
             `;
     divApp.innerHTML = html;
 };
 
-// subView();
-// function subView() {
-// let html = "";
-// html += `
-// <div id="dropDownMenu">
-// <select>
-// <option value="1">Box 1</option>
-// <option value="2">Box 2</option>
-// </select>
-// </div>
-// <div id="subViewButtons">
-// <Button>Legg til ny</button>
-// <Button>Endre valgt</button>
-// <Button>Flytt</button>
-// <Button>Slett</button>
-// </div>
-// `;
-// divApp.innerHTML = html;
-// }
