@@ -12,6 +12,18 @@ function subView() {
     html += `
     </select>
     </div>
+    <div>
+    for (let j = 0; j < model.boxes[index].content.length; j++) {
+        html += ` 
+        ${model.boxes[index].content[j].contentOfBox}
+        `;
+        for (let k = 0; k < model.boxes[index].content[j].contentOfBox.length; k++) {
+            html += `
+            ${model.boxes[index].content[j].contentOfBox[k]},
+            `;
+        }
+    }
+    </div>
     `
         html += `
                 <div id="subViewButtons">
@@ -22,7 +34,7 @@ function subView() {
                 </div>
                 `;
         divApp.innerHTML = html;
-    }
+}
 
 //Dropdown meny som gjør det mulig å hoppe igjennom hver boks. Derav ut ifra model.boxes så skal jeg få muligheten til å endre innholdet ut ifra den gitte boksen je ghar valgt.
 //Så trenger jeg en mulighet for å printe ut innholdet i den gitte boksen model.boxes.content.contentofbox
@@ -31,3 +43,5 @@ function subView() {
 //moveContentFromBox. Skal kunne flytte en gjenstand fra en boks til en annen
 //deleteContentInBox. Skal kunne slette den gitte gjenstanden fra boksen.
 //Checkbox som skal bli printent for å hente indexen til gjenstandene innenfor hver boks. sånn at jeg får slettet eller endret ut ifra dette.
+
+

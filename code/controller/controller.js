@@ -32,7 +32,10 @@
     //Legg til ny
     //Legge til nytt innhold innenfor den valgte boksen.
     function addNewContentInBox() {
-        model.boxes(index).content.contentOfBox.push
+        let x = {
+            contentOfBox: 'test',
+        };
+        model.boxes[index].content.push(x);
     subView();
     }
 
