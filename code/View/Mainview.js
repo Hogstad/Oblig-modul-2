@@ -4,7 +4,7 @@ function mainView() {
     let html = "";
     html += `
     <div id="dropDownMenu">
-    <select onchange="selectedBox(this.value)"> `;
+    <select onchange="selectedBox(this.value, true)"> `;
     for(let i = 0; i <model.boxes.length; i++) {
         if (i == model.selectedBox) {
             html += `
@@ -24,7 +24,7 @@ function mainView() {
         html += `
                 <div id="mainViewButtons">
                     <button onclick="newBox()">Legg til ny</button>
-                    <button onclick="showContent(${model.selectedBox})">Vis innhold</button>
+                    <button onclick="subView()">Vis innhold</button>
                     <button onclick="seach()">Søk etter innhold</button>
                     <button onclick="deleteBox(${model.selectedBox})">Slett valgt</button>
                 </div>

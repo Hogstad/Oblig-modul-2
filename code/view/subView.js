@@ -3,29 +3,48 @@ function subView() {
     let html = "";
     html += `
     <div id="dropDownMenu">
-    <select> `;
+    <select onchange="selectedBox(this.value, false)"> `;
     for(let i = 0; i <model.boxes.length; i++) {
-        html += `
-        <option onclick="selectedBox(${i})">${model.boxes[i].name}</option>
-        `;
+        if (i == model.selectedBox) {
+            html += `
+            <option selected value="${i}">${model.boxes[i].name}</option>
+            `;
+        }
+        else {
+            html += `
+            <option value="${i}">${model.boxes[i].name}</option>
+            `;
+        }
     }
     html += `
     </select>
     </div>
     `;
     html += `
-    <div id="ContentofBoxDiv">
-    for (let j = 0; j < model.boxes[index].content.length; j++) {
-        html += ` 
-        $;{model.boxes[index].content[j].contentOfBox};
-        `;
-        for (let k = 0; k < model.boxes[index].content[j].contentOfBox.length; k++) {
-            html += `
-            $;{model.boxes[index].content[j].contentOfBox[k]};
+    <table style="width:60%">
+    `;
+    let content = model.boxes[model.selectedBox].content;
+    for(let j = 0; j < content.length; j++) {
+        html += `
+        <tr>
+            <td>${j + 1}:</td>
+            <td>${content[j].contentOfBox}</td>
             `;
-        }
-    }
-    </div>
+            if (j === model.checkedBox) {
+               html += `
+               <td><input checked type="checkbox"></td>`;
+            }
+            else {
+                html += `
+                <td> <input type="checkbox"> </td>
+                `;
+            }
+            html += `
+        </tr>
+        `; 
+    } 
+    html += `
+    </table>
     `;
         html += `
                 <div id="subViewButtons">
@@ -47,3 +66,14 @@ function subView() {
 //Checkbox som skal bli printent for å hente indexen til gjenstandene innenfor hver boks. sånn at jeg får slettet eller endret ut ifra dette.
 
 
+{/* <table style="width:100%">
+  <tr>
+    <th>Number</th>
+    <th>Content</th>
+    <th>CheckBox</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Greier 1</td>
+    <td>Checkbox</td>
+  </tr> */}

@@ -31,9 +31,9 @@
     //Vis innhold
     //Sende deg inn på subView, innenfor den boksen som er valgt.
     function showContent() {
-        }
+
     subView();
-    
+    }
     //Søk etter innhold
     //Søkeboks som man kan søke igjennom gjenstander i alle boksene i modellen.
     function search() {
@@ -78,9 +78,9 @@
     subView();
     }
 
-    function selectedBox(num) {
+    function selectedBox(num, bool) {
         model.selectedBox = num;
-    mainView();
+        bool ? mainView() : subView()
     }
     //model.boxes.content.contentofbox
 
