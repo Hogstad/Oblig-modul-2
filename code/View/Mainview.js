@@ -4,11 +4,18 @@ function mainView() {
     let html = "";
     html += `
     <div id="dropDownMenu">
-    <select> `;
+    <select onchange="selectedBox(this.value)"> `;
     for(let i = 0; i <model.boxes.length; i++) {
-        html += `
-        <option onclick="selectedBox(${i})">${model.boxes[i].name}</option>
-        `;
+        if (i == model.selectedBox) {
+            html += `
+            <option selected value="${i}">${model.boxes[i].name}</option>
+            `;
+        }
+        else {
+            html += `
+            <option value="${i}">${model.boxes[i].name}</option>
+            `;
+        }
     }
     html += `
     </select>
