@@ -2,7 +2,11 @@
     //Legg til ny
     // Legge til en ny box i modellen.
     function newBox() {
-        model.boxes.push();
+        let x = {
+            name: 'Box '+ (model.boxes.length+1),
+            content: [],
+        };
+        model.boxes.push(x);
     mainView();
     }
 
