@@ -25,7 +25,7 @@ function mainView() {
                 <div id="mainViewButtons">
                     <button onclick="newBox()">Legg til ny</button>
                     <button onclick="subView()">Vis innhold</button>
-                    <button onclick="seach()">Søk etter innhold</button>
+                    <button onclick="searchView()">Søk etter innhold</button>
                     <button onclick="deleteBox(${model.selectedBox})">Slett valgt</button>
                 </div>
                 `;

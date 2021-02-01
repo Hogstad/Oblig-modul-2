@@ -32,11 +32,11 @@ function subView() {
             `;
             if (j === model.checkedBox) {
                html += `
-               <td><input checked type="checkbox"></td>`;
+               <td><input checked type="checkbox" onchange="boxIsChecked(${j})"></td>`;
             }
             else {
                 html += `
-                <td> <input type="checkbox"> </td>
+                <td> <input type="checkbox" onchange="boxIsChecked(${j})"> </td>
                 `;
             }
             html += `
@@ -64,16 +64,3 @@ function subView() {
 //moveContentFromBox. Skal kunne flytte en gjenstand fra en boks til en annen
 //deleteContentInBox. Skal kunne slette den gitte gjenstanden fra boksen.
 //Checkbox som skal bli printent for å hente indexen til gjenstandene innenfor hver boks. sånn at jeg får slettet eller endret ut ifra dette.
-
-
-{/* <table style="width:100%">
-  <tr>
-    <th>Number</th>
-    <th>Content</th>
-    <th>CheckBox</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Greier 1</td>
-    <td>Checkbox</td>
-  </tr> */}

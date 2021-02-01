@@ -37,7 +37,15 @@
     //Søk etter innhold
     //Søkeboks som man kan søke igjennom gjenstander i alle boksene i modellen.
     function search() {
-    mainView();
+        for (let i = 0; i < model.boxes.length; i++) {
+            for (let j = 0; j < model.boxes[i].content.length; j++ ) {
+                if (model.searchInput == model.boxes[i].content[j].contentOfBox) {
+                    model.selectedBox = i;
+                    model.checkedBox = j;
+                    subView();
+                }
+            }
+        }
     }
 
     //Slett Valgt
@@ -73,8 +81,14 @@
 
     //Slett
     //Slette den valgte gjenstanden innenfor den valgte boksen.
-    function deleteContentInBox(index) {
-        model.boxes[index].content.splice(index,1),
+    function deleteContentInBox() {
+        if (model.checkedBox === '') {
+            return
+        }
+        else {
+            model.boxes[model.selectedBox].content.splice(model.checkedBox,1)
+        }
+        model.checkedBox = '';
     subView();
     }
 
@@ -84,4 +98,14 @@
     }
     //model.boxes.content.contentofbox
 
-  
+    //Checkbox
+    //Velge den gitte gjenstanden ut ifra modellen.
+    function boxIsChecked(index) {
+        if (index === model.checkedBox) {
+            model.checkedBox = ''; 
+        }
+        else {
+            model.checkedBox = index;
+        }
+    subView();
+    }
