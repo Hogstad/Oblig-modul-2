@@ -20,3 +20,9 @@ function subView() {
             `;
     divApp.innerHTML = html;
 }
+for(let i = 0; i < model.boxes.length; i++) {
+    html += `
+    <select>
+        <option onclick="printBoxes(${i})" id="dropDownMenu">${model.boxes[i].name}</option>    
+   </select>
+`;
