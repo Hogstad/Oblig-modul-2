@@ -2,25 +2,19 @@
     //Legg til ny
     // Legge til en ny box i modellen.
     function newBox() {
-        let x = {
-            name: 'Box 3',
-        };
-    model.boxes.push(x);
+        model.boxes.push();
     mainView();
     }
 
     //Vis innhold
     //Sende deg inn på subView, innenfor den boksen som er valgt.
     function showContent() {
-    mainView();
-
     }
 
     //Søk etter innhold
     //Søkeboks som man kan søke igjennom gjenstander i alle boksene i modellen.
     function search() {
     mainView();
-
     }
 
     //Slett Valgt
@@ -36,7 +30,6 @@
     function addNewContentInBox() {
         model.boxes(index).content.contentOfBox.push
     subView();
-
     }
 
     //Endre valgt
@@ -44,7 +37,6 @@
     function changeContentInBox() {
         model.boxes(index).content.contentOfBox.splice(index,1)
     subView();
-
     }
 
     //flytt
@@ -59,3 +51,9 @@
         model.boxes[index].content.splice(index,1),
     subView();
     }
+
+    function selectedBox(num) {
+        model.selectedBox = num;
+    mainView();
+    }
+    //model.boxes.content.contentofbox

@@ -2,6 +2,9 @@
 const divApp = document.getElementById("app");
 
 const model = {
+    showBoxes: "",
+    selectedBox: 0,
+    
     boxes: [
         {
             name: 'Box 1',
@@ -19,6 +22,16 @@ const model = {
                 { contentOfBox: 'greier6', isChecket: false },
                 { contentOfBox: 'greier7', isChecket: false },
                 { contentOfBox: 'greier8', isChecket: false },
+            ],
+
+        },
+        {
+            name: 'Box 3',
+            content: [
+                { contentOfBox: 'greier9', isChecket: false },
+                { contentOfBox: 'greier10', isChecket: false },
+                { contentOfBox: 'greier11', isChecket: false },
+                { contentOfBox: 'greier12', isChecket: false },
             ],
 
         },
