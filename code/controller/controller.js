@@ -10,11 +10,30 @@
     mainView();
     }
 
+    function newBoxName() {
+        for (let i = 1; i <= model.boxes.length +1; i++) {
+            if (newBoxNameHelper(i)) {
+                return 'Box '+i;
+            }
+        }
+    }
+
+    function newBoxNameHelper(i) {
+        for (let j = 0; j < model.boxes.length; j++) {
+            let num = model.boxes[j].name.substring(4)
+            if (num == i) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     //Vis innhold
     //Sende deg inn på subView, innenfor den boksen som er valgt.
     function showContent() {
-    }
-
+        }
+    subView();
+    
     //Søk etter innhold
     //Søkeboks som man kan søke igjennom gjenstander i alle boksene i modellen.
     function search() {
@@ -65,19 +84,4 @@
     }
     //model.boxes.content.contentofbox
 
-    function newBoxName() {
-        for (let i = 1; i <= model.boxes.length +1; i++) {
-            if (newBoxNameHelper(i)) {
-                return 'Box '+i;
-            }
-        }
-    }
-    function newBoxNameHelper(i) {
-        for (let j = 0; j < model.boxes.length; j++) {
-            let num = model.boxes[j].name.substring(4)
-            if (num == i) {
-                return false;
-            }
-        }
-        return true;
-    }
+  
