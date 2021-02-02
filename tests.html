@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Test Suite</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.14.0.css">
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.14.0.js"></script>
+    <script src="./code/model/model.js"></script>
+    <script src="./code/controller/controller.js"></script>
+
+    <script>
+        //model
+        function mainView() {
+
+        }
+        function subView() {
+
+        }
+        function searchView() {
+
+        }
+        function addNewContentView() {
+
+        }
+        function changeContentView() {
+
+        }
+
+//funksjonene gjør som de skal med riktig input 
+    QUnit.test('Add new box to modell', function(assert) {
+            let lenghtOfListBeforeAdding = model.boxes.length;
+            newBox();
+            let actual = model.boxes.length;
+            let expected = lenghtOfListBeforeAdding +1;
+            assert.deepEqual(actual, expected);
+    });
+    
+    // Qunit.test('Legge til data i modellen med ugyldig input', function(assert) {
+
+    // });
+
+    QUnit.test('Delete box in model', function(assert) {
+            let lenghtOfListBeforeDeleteing = model.boxes.length;
+            deleteBox(1);
+            let actual = model.boxes.length;
+            let expected = lenghtOfListBeforeDeleteing -1;
+            assert.deepEqual(actual, expected);
+    });
+
+    QUnit.test('Delete box in model with invalid input', function(assert) {
+            let lenghtOfListBeforeDeleteingBlank = model.boxes.length;
+            deleteBox('hei');
+            let actual = model.boxes.length;
+            let expected = lenghtOfListBeforeDeleteingBlank;
+            assert.deepEqual(actual, expected);
+    });
+
+    </script>
+</body>
+</html>

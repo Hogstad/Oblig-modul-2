@@ -51,6 +51,9 @@
     //Slett Valgt
     //Slette den markerte boksen.
     function deleteBox(index) {
+        if (typeof(index) !== "number") {
+            return;
+        }
         model.boxes.splice(index, 1);
     mainView();
     }
