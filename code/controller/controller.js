@@ -31,9 +31,9 @@
     //Vis innhold
     //Sende deg inn på subView, innenfor den boksen som er valgt.
     function showContent() {
-
     subView();
     }
+
     //Søk etter innhold
     //Søkeboks som man kan søke igjennom gjenstander i alle boksene i modellen.
     function search() {
@@ -73,12 +73,6 @@
     subView();
     }
 
-    //flytt
-    //Flytte en gjenstand fra boks x til box y f.eks.
-    function moveContentfromBox() {
-    subView();
-    }
-
     //Slett
     //Slette den valgte gjenstanden innenfor den valgte boksen.
     function deleteContentInBox() {
@@ -91,12 +85,13 @@
         model.checkedBox = '';
     subView();
     }
-
+    
+    //SelectedBox
+    //Hjelpe function til select
     function selectedBox(num, bool) {
         model.selectedBox = num;
         bool ? mainView() : subView()
     }
-    //model.boxes.content.contentofbox
 
     //Checkbox
     //Velge den gitte gjenstanden ut ifra modellen.

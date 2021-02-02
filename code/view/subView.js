@@ -48,8 +48,8 @@ function subView() {
     `;
         html += `
                 <div id="subViewButtons">
-                    <button onclick="addNewContentInBox()">Legg til ny</button>
-                    <button onclick="changeContentInBox()">Endre valgt</button>
+                    <button onclick="addNewContentView()">Legg til ny</button>
+                    <button onclick="changeContentView()">Endre valgt</button>
                     <button onclick="mainView()">Home</button>
                     <button onclick="deleteContentInBox()">Slett</button>
                 </div>

@@ -6,6 +6,8 @@ const model = {
     selectedBox: 0,
     checkedBox: '',
     searchInput: '',
+    newContentInput: '',
+    changeContentInput: '',
     
     boxes: [
         {
