@@ -1,4 +1,3 @@
-
 function subView() {
     let html = "";
     html += `
