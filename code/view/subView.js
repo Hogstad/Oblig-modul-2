@@ -49,9 +49,9 @@ function subView() {
         html += `
                 <div id="subViewButtons">
                     <button onclick="addNewContentView()">Legg til ny</button>
-                    <button onclick="changeContentView()">Endre valgt</button>
+                    <button onclick="changeContentView()" ${model.checkedBox === '' ? "disabled" : ''}>Endre valgt</button>
                     <button onclick="mainView()">Home</button>
-                    <button onclick="deleteContentInBox()">Slett</button>
+                    <button onclick="deleteContentInBox()" ${model.checkedBox === '' ? "disabled" : ''}>Slett</button>
                 </div>
                 `;
         divApp.innerHTML = html;

@@ -60,16 +60,17 @@
     //Legge til nytt innhold innenfor den valgte boksen.
     function addNewContentInBox() {
         let x = {
-            contentOfBox: 'test',
+            contentOfBox: model.newContentInput,
         };
-        model.boxes[index].content.push(x);
+        model.boxes[model.selectedBox].content.push(x)
     subView();
     }
-
+    
     //Endre valgt
     //Her skal man kunne endre den valgte gjenstanden som er inne i en ny boks (navn)
     function changeContentInBox() {
-        model.boxes(index).content.contentOfBox.splice(index,1)
+        model.boxes[model.selectedBox].content[model.checkedBox].contentOfBox = model.changeContentInput;
+        model.checkedBox = '';
     subView();
     }
 
