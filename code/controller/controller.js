@@ -62,6 +62,9 @@
     //Legg til ny
     //Legge til nytt innhold innenfor den valgte boksen.
     function addNewContentInBox() {
+        if (model.newContentInput === "") {
+            return;
+        }
         let x = {
             contentOfBox: model.newContentInput,
         };

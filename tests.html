@@ -40,9 +40,15 @@
             assert.deepEqual(actual, expected);
     });
     
-    // Qunit.test('Legge til data i modellen med ugyldig input', function(assert) {
-
-    // });
+    QUnit.test('Add new content in box with invalid input', function(assert) {
+            model.selectedBox = 0;
+            let addNewContentInBoxWithInvalidInput = model.boxes[model.selectedBox].content.length;
+            model.newContentInput = '';           
+            addNewContentInBox();
+            let actual = model.boxes[model.selectedBox].content.length;
+            let expected = addNewContentInBoxWithInvalidInput;
+            assert.deepEqual(actual, expected);
+    });
 
     QUnit.test('Delete box in model', function(assert) {
             let lenghtOfListBeforeDeleteing = model.boxes.length;
